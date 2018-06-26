@@ -1,4 +1,8 @@
+.. note::
+    :class: sphx-glr-download-link-note
 
+    Click :ref:`here <sphx_glr_download_examples_Radar_Server_Level_3.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
 
 .. _sphx_glr_examples_Radar_Server_Level_3.py:
 
@@ -43,7 +47,9 @@ available.
 
 .. rst-class:: sphx-glr-script-out
 
- Out::
+ Out:
+
+ .. code-block:: none
 
     ['NEXRAD Level II Radar for Case Study CCS039', 'NEXRAD Level II Radar from IDD', 'NEXRAD Level III Radar for Case Study CCS039', 'NEXRAD Level III Radar from IDD', 'TDWR Level III Radar from IDD']
 
@@ -78,9 +84,11 @@ Look at the variables available in this dataset
 
 .. rst-class:: sphx-glr-script-out
 
- Out::
+ Out:
 
-    {'N0U', 'HHC', 'N0Q', 'NAM', 'N0K', 'N3K', 'N3C', 'DOD', 'N1M', 'NCR', 'NET', 'N2X', 'N0C', 'N2K', 'N3S', 'N1X', 'NVL', 'NBH', 'N0R', 'DU3', 'NBK', 'NBQ', 'NBU', 'N0M', 'N3Q', 'NAU', 'N1U', 'OHA', 'N1S', 'N2H', 'NAQ', 'N2Q', 'DPA', 'PTA', 'N2U', 'N3U', 'N0S', 'NMD', 'NBC', 'NAC', 'N1P', 'NAK', 'N1K', 'N2S', 'N3X', 'EET', 'NBX', 'N0H', 'N2M', 'N0V', 'N2C', 'DSD', 'DSP', 'N0Z', 'DVL', 'N3M', 'NVW', 'N0X', 'DAA', 'NAX', 'NTP', 'DHR', 'DPR', 'NBM', 'N1H', 'NST', 'N1C', 'NAH', 'DU6', 'N1Q', 'DTA', 'N3H'}
+ .. code-block:: none
+
+    {'N2Q', 'PTA', 'N0H', 'N3Q', 'NVL', 'N0Q', 'N0U', 'NAX', 'DHR', 'NBC', 'NTP', 'NBX', 'DSP', 'NAQ', 'NBM', 'N0X', 'N2C', 'DSD', 'N0V', 'N3K', 'DOD', 'N3S', 'N3X', 'N2H', 'N1H', 'DU3', 'N1M', 'N0C', 'N2K', 'N0S', 'N0M', 'DVL', 'DTA', 'N3M', 'N2X', 'NBQ', 'NBU', 'HHC', 'N1Q', 'N2M', 'NAM', 'NAU', 'NAC', 'N1S', 'N2S', 'N0R', 'DU6', 'N3C', 'NAH', 'NBK', 'N1K', 'NVW', 'OHA', 'NMD', 'DPA', 'N1C', 'N1X', 'NBH', 'DAA', 'N2U', 'NST', 'EET', 'NET', 'NAK', 'N1P', 'N0K', 'N3H', 'DPR', 'N0Z', 'N3U', 'N1U', 'NCR'}
 
 
 Create a new query object to help request the data. Using the chaining
@@ -147,9 +155,11 @@ find one NIDS file in the return.
 
 .. rst-class:: sphx-glr-script-out
 
- Out::
+ Out:
 
-    ['Level3_FTG_N0Q_20180403_1943.nids']
+ .. code-block:: none
+
+    ['Level3_FTG_N0Q_20180626_1606.nids']
 
 
 We can pull that dataset out of the dictionary and look at the available access URLs.
@@ -168,9 +178,11 @@ We see URLs for OPeNDAP, CDMRemote, and HTTPServer (direct download).
 
 .. rst-class:: sphx-glr-script-out
 
- Out::
+ Out:
 
-    {'OPENDAP': 'http://thredds.ucar.edu/thredds/dodsC/nexrad/level3/IDD/N0Q/FTG/20180403/Level3_FTG_N0Q_20180403_1943.nids', 'HTTPServer': 'http://thredds.ucar.edu/thredds/fileServer/nexrad/level3/IDD/N0Q/FTG/20180403/Level3_FTG_N0Q_20180403_1943.nids', 'CdmRemote': 'http://thredds.ucar.edu/thredds/cdmremote/nexrad/level3/IDD/N0Q/FTG/20180403/Level3_FTG_N0Q_20180403_1943.nids'}
+ .. code-block:: none
+
+    {'OPENDAP': 'http://thredds.ucar.edu/thredds/dodsC/nexrad/level3/IDD/N0Q/FTG/20180626/Level3_FTG_N0Q_20180626_1606.nids', 'HTTPServer': 'http://thredds.ucar.edu/thredds/fileServer/nexrad/level3/IDD/N0Q/FTG/20180626/Level3_FTG_N0Q_20180626_1606.nids', 'CdmRemote': 'http://thredds.ucar.edu/thredds/cdmremote/nexrad/level3/IDD/N0Q/FTG/20180626/Level3_FTG_N0Q_20180626_1606.nids'}
 
 
 We'll use the CDMRemote reader in Siphon and pass it the appropriate access URL.
@@ -236,18 +248,22 @@ Finally, we plot them up using matplotlib.
 
 
 .. image:: /examples/images/sphx_glr_Radar_Server_Level_3_001.png
-    :align: center
+    :class: sphx-glr-single-img
 
 
 
 
-**Total running time of the script:** ( 0 minutes  1.600 seconds)
+**Total running time of the script:** ( 0 minutes  0.914 seconds)
 
+
+.. _sphx_glr_download_examples_Radar_Server_Level_3.py:
 
 
 .. only :: html
 
  .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
+
 
 
   .. container:: sphx-glr-download
